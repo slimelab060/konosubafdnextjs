@@ -4,6 +4,7 @@ import { Navbar } from '@/components/navbar';
 import { ModeToggle } from '@/components/theme-mode';
 import { Button } from '@/components/ui/button';
 import { Searchicon } from '@/components/ui/search';
+import { DEV_VERSION, DEV_DATE } from '@/lib/devfunction';
 
 export const Header = () => {
   return (
@@ -19,7 +20,9 @@ export const Header = () => {
             <div className="hidden md:block">
               <nav className="flex space-x-4"></nav>
             </div>
-            <div className="text-sm font-bold ">dev 0.6 240706</div>
+            <div className="text-sm font-bold ">
+              {DEV_VERSION} {DEV_DATE}
+            </div>
           </div>
 
           <div className="flex">

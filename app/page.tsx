@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Testimg from '../public/carousel/24021.jpg';
 import { TestSpreadOperator } from '@/components/TestSpreadOperator';
 import { Testcolorvar } from '@/components/Testcolorvar';
-import EmblaCarousel from '@/components/carousel';
 import CountDownTimer from '@/components/countdowntimer';
 import { Newsinfo } from '@/components/newsinfo';
 import { SideMenu } from '@/components/sidemenu';
@@ -48,14 +47,6 @@ export default async function Home({ searchParams }: PageProps) {
           <SideMenu />
         </div>
         <div className="border bg-card p-4 lg:my-4 lg:min-h-screen lg:rounded-md lg:shadow-sm">
-          <EmblaCarousel
-            slides={SLIDES}
-            options={{
-              loop: true,
-              duration: 20,
-              inViewThreshold: 0,
-            }}
-          />
           <h1 className="pb-2 text-2xl font-bold">最新情報</h1>
           <div className=" my-4 gap-4 md:grid md:grid-cols-1 lg:grid-cols-2">
             <Newsinfo title="タイトル名" description="ここに説明文" url="#" imagepath={Testimg.src} />
